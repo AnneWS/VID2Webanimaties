@@ -11,11 +11,12 @@ Op de poster zie je de tekst "The whole last earth catalog", met daaronder "acce
 Bron: https://images-na.ssl-images-amazon.com/images/I/51xRNC7iTdL._SX372_BO1,204,203,200_.jpg
 
 # Functies
-* klik op grijze aarde.
-* klik op gekleurde aarde.
+* klik op grijze aarde -> wordt gekleurde aarde.
+* klik op gekleurde aarde -> wordt grijze aarde.
 * pijltjes toets rechts -> aarde draait naar rechts.
 * pijltjes toets links -> aarde draait naar links.
 * klik op cirkel over de aarde heen -> cirkel gaat naar rechts. (wilde eigenlijk met scrollen doen).
+* scroll naar beneden, de cirkel over de aarde verdwijnt.
 * scroll terug naar boven als je op "Evening. Thanks again." klikt.
 
 # Toevoegingen
