@@ -7,6 +7,7 @@ In mijn geval heb ik gekozen voor het werk "The whole last earth catalog" van St
 Op de poster zie je de tekst "The whole last earth catalog", met daaronder "access to tools". Daaronder zie je een groot beeld van de aarde in zwart wit, maar dan een klein stukje, de rest van de aarde zit verstopt achter een zwarte cirkel; net zoals een deel van de maan te zien is. Hieronder staat heel klein de tekst "Evening. Thanks again".
 
 ![Poster The whole last earth catalog](https://images-na.ssl-images-amazon.com/images/I/51xRNC7iTdL._SX372_BO1,204,203,200_.jpg)
+
 Bron: https://images-na.ssl-images-amazon.com/images/I/51xRNC7iTdL._SX372_BO1,204,203,200_.jpg
 
 # Functies
