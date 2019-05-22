@@ -17,7 +17,7 @@ Bron: https://images-na.ssl-images-amazon.com/images/I/51xRNC7iTdL._SX372_BO1,20
 * pijltjes toets links -> aarde draait naar links.
 * klik op cirkel over de aarde heen -> cirkel gaat naar rechts. (wilde eigenlijk met scrollen doen).(nog ff fixen)
 * scroll naar beneden, de cirkel over de aarde verdwijnt.
-* scroll terug naar boven als je op "Evening. Thanks again." klikt.
+* scroll terug naar boven als je op "Evening. Thanks again." klikt. Eerst komt er nog een pijltje tevoorschijn als je over de tekst hovert.
 
 # Toevoegingen
 Ik heb enkele dingetjes toegevoegd aan het kunstwerk, namelijk:
