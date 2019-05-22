@@ -15,7 +15,7 @@ Bron: https://images-na.ssl-images-amazon.com/images/I/51xRNC7iTdL._SX372_BO1,20
 * klik op gekleurde aarde -> wordt grijze aarde.
 * pijltjes toets rechts -> aarde draait naar rechts.
 * pijltjes toets links -> aarde draait naar links.
-* klik op cirkel over de aarde heen -> cirkel gaat naar rechts. (wilde eigenlijk met scrollen doen).
+* klik op cirkel over de aarde heen -> cirkel gaat naar rechts. (wilde eigenlijk met scrollen doen).(nog ff fixen)
 * scroll naar beneden, de cirkel over de aarde verdwijnt.
 * scroll terug naar boven als je op "Evening. Thanks again." klikt.
 
