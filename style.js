@@ -110,26 +110,26 @@ cirkelObj.addEventListener('click', moveRight);*/
 }
 
 cirkel.addEventListener('click', verschuiven);*/
-/*var cirkel = document.querySelector('div>svg>circle');
+var cirkel = document.querySelector('div>svg>circle');
 //console.log(cirkel);
 
 window.addEventListener("scroll", function() {
-    if (window.pageYOffset >= 500){
+    if (window.pageYOffset >= 600){
         //console.log("check");
         cirkel.classList.add("moveright");
     }
     else {
         cirkel.classList.remove("moveright");
     }
-});*/
+});
 
 
-var windowHeight =  Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+/*var windowHeight =  Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 window.addEventListener('scroll', function() {
   var cirkel = document.querySelector('div>svg>circle'),
       offset = cirkel.getBoundingClientRect().top - windowHeight;
-    if (window.pageYOffset >= 500){
+    if (window.pageYOffset >= 600){
         //console.log("check");
         cirkel.classList.add("moveright");
     }
@@ -137,4 +137,16 @@ window.addEventListener('scroll', function() {
         cirkel.classList.remove("moveright");
     }
 
-});
+});*/
+
+/*var cirkel = document.querySelector('div>svg>circle');
+function moveCircle() {
+    cirkel.classList.toggle('moveright');
+}
+
+function moveCircleBack() {
+    cirkel.classList.remove('moveright');
+}
+
+cirkel.addEventListener('mouseover', moveCircle);
+cirkel.addEventListener('mouseout', moveCircleBack);*/
