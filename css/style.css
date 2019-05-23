@@ -28,9 +28,9 @@ body {
 .rocket {
     width: 8em;
     position: absolute;
-    left: 90%;
+    left: 80vw;
     top: 10%;
-    animation: goingDown 2s, upanddown 2s alternate infinite, 0.5s loading 0.5s forwards;
+    animation: 0.5s goingDown 2s, upanddown 2s alternate infinite, 0.5s loading 0.5s forwards;
     opacity: 0;
 }
 
@@ -68,15 +68,15 @@ h2 {
 .circle {
     position: absolute;
     width: 100vh;
-    margin-left: 7em;
     z-index: 1;
     opacity: 0;
     animation: 0.5s loading 0.5s forwards;
+    transform: translate(10%, 0%);
 }
 
 circle.moveright {
-    opacity: 0;
-    z-index: -5;
+    opacity: 1;
+    animation: movingright 4s forwards;
 }
 
 img {
@@ -148,11 +148,11 @@ h3:hover::after {
 
 @keyframes goingDown {
     0% {
-        opacity: 0;
-        transform: translateY(-500%);
+        opacity: 1;
+        transform: translateY(-1000%);
     }
     100 {
-        transform: translateY(150%);
+        transform: translateY(100%);
         opacity: 1;
     }
 }
@@ -162,7 +162,7 @@ h3:hover::after {
         transform: translateY(0%);
     }
     100% {
-        transform: translateY(50%);
+        transform: translateY(35%);
     }
 }
 
@@ -172,6 +172,15 @@ h3:hover::after {
     }
     to {
         background-position: 1300% 600%
+    }
+}
+
+@keyframes movingright {
+    from {
+        transform: translate(10%, 0%);
+    }
+    to {
+        transform: translate(100%, 0%);
     }
 }
 
@@ -204,9 +213,13 @@ h3:hover::after {
         font-size: 7em;
     }
 
+    .rocket {
+        left: 80vw;
+    }
+
     .circle {
         width: 70vh;
-        margin-left: 5em;
+        transform: translate(10%, 0%);
     }
 
     img {
@@ -219,9 +232,13 @@ h3:hover::after {
         font-size: 5em;
     }
 
+    .rocket {
+        left: 80vw;
+    }
+
     .circle {
         width: 50vh;
-        margin-left: 3em;
+        transform: translate(10%, 0%);
     }
 
     img {
@@ -234,9 +251,13 @@ h3:hover::after {
         font-size: 3em;
     }
 
+    .rocket {
+        left: 80vw;
+    }
+
     .circle {
         width: 30vh;
-        margin-left: 2em;
+        transform: translate(10%, 0%);
     }
 
     img {
