@@ -225,6 +225,14 @@ h3:hover::after {
     img {
         width: 70vh;
     }
+
+    img.kleur {
+        content: url(../images/earth_PNG39.png);
+        width: 70vh;
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+        z-index: 5;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -244,6 +252,14 @@ h3:hover::after {
     img {
         width: 50vh;
     }
+
+    img.kleur {
+        content: url(../images/earth_PNG39.png);
+        width: 50vh;
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+        z-index: 5;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -262,5 +278,13 @@ h3:hover::after {
 
     img {
         width: 30vh;
+    }
+
+    img.kleur {
+        content: url(../images/earth_PNG39.png);
+        width: 30vh;
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+        z-index: 5;
     }
 }
