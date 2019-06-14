@@ -23,3 +23,13 @@ Bron: https://images-na.ssl-images-amazon.com/images/I/51xRNC7iTdL._SX372_BO1,20
 Ik heb enkele dingetjes toegevoegd aan het kunstwerk, namelijk:
 * het raketje.
 * de achtergrond met sterretjes.
+
+# Versie 2
+Aanpassing t.o.v feedback bij versie 1
+* Hover over de h1 tekst -> last wordt doorgestreept.
+* Access to tools is nu een soort button, zodat je "acces" krijgt van de tools (als er een andere pagina zou zijn).
+* Het raketje vliegt nu weg als je er over hovert.
+* maantje en zonnetje toegevoegd. Maantje is de nachtmodus -> grijze aarde. Zonnetje is de dagmodus -> gekleurde aarde. Werkt nu met filter ipv verschillende plaatjes.
+* De aarde is nu gevormd in een clip-path.
+* Als je nu naar beneden scrollt, komt de aarde meer tevoorschijn. 
+* Buttons toegevoegd (alleen voor tablet en mobiel te zien), zodat je daar de aarde ook kunt draaien.
