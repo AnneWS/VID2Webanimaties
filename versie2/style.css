@@ -1,0 +1,475 @@
+@font-face {
+    font-family: 'Windsor BT Roman';
+    font-style: normal;
+    font-weight: normal;
+    src: local('../css/fonts/Windsor BT Roman'), url('../css/fonts/WindsorBTRoman.woff') format('woff');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Windsor BT Roman';
+}
+
+.loading {
+    width: 800px;
+    top: 50%;
+    animation-name: goingUp;
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+    opacity: 0;
+}
+
+.rocket {
+    width: 8em;
+    position: absolute;
+    left: 85vw;
+    top: 10%;
+    animation: 0.5s goingDown 2s, upanddown 2s alternate infinite, 0.5s loading 0.5s forwards;
+    opacity: 0;
+    z-index: 5;
+    cursor: pointer;
+    padding: 2em;
+}
+
+.rocket:hover {
+    animation: leaving 5s;
+}
+ /*bron: https://css-tricks.com/parallax-background-css3/ */
+#background {
+    background: black url(../images/background.png) repeat 5% 5%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 100;
+    animation-name: starmoving;
+    animation-duration: 200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+h1 {
+    font-size: 10em;
+    opacity: 0;
+    animation: loading 0.5s forwards;
+    cursor: pointer;
+    width: 7em;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*bron https://stackoverflow.com/questions/39388502/custom-strikethrough-on-hover-with-text-that-has-two-paragraphs */
+h1 span {
+  position: relative;
+  display: inline-block;
+}
+
+h1 span:nth-of-type(2)::after,
+h1 span:nth-of-type(2)::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: blue;
+}
+
+h1 span:nth-of-type(2)::before {
+    left: -2.5px;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+h1 span:nth-of-type(2)::after {
+  right: 2.5px;
+  background: blue;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+h1:hover span:nth-of-type(2)::before{
+    background: blue;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+h1:hover span:nth-of-type(2)::after {
+  width: 100%;
+  transition: 0s;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+h2 {
+    font-size: 2em;
+    opacity: 0;
+    animation: 0.5s loading 0.5s forwards;
+    cursor: pointer;
+    border: white;
+    border-style: solid;
+    border-radius: 50px;
+    padding: 0.5em;
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2:hover {
+    background-color: white;
+    color: black;
+}
+
+h2:hover::after {
+    content: ' \2192';
+}
+
+.moon {
+    width: 5em;
+    position: absolute;
+    margin-left: 10em;
+    z-index: 2;
+    cursor: pointer;
+    display: block;
+}
+
+.moon:hover {
+    transform: scale(1.1);
+}
+
+.sun {
+    width: 5em;
+    position: absolute;
+    margin-left: 10em;
+    display: none;
+    cursor: pointer;
+}
+
+.sun:hover {
+    animation: draaienRechts 2s;
+}
+
+.circle {
+    position: absolute;
+    width: 100vh;
+    z-index: 1;
+    opacity: 0;
+    animation: 0.5s loading 0.5s forwards;
+    transform: translate(10%, 0%);
+}
+
+circle.moveright {
+    opacity: 1;
+    animation: movingright 4s forwards;
+}
+
+img {
+    width: 100vh;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    opacity: 0;
+    animation: 0.5s loading 0.5s forwards;
+    z-index: 5;
+    clip-path: ellipse(25% 100% at 0% 50%);
+    filter: grayscale(100%);
+}
+
+img.kleur {
+    width: 100vh;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    z-index: 5;
+    filter: grayscale(0%);
+}
+
+img.draaiRechts {
+    width: 100vh;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    animation: 5s draaienRechts linear 1;
+    z-index: 5;
+    opacity: 1;
+}
+
+img.draaiLinks {
+    width: 100vh;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    animation: 5s draaienLinks linear 1;
+    z-index: 5;
+    opacity: 1;
+}
+
+button {
+    display: none;
+    font-family: 'Windsor BT Roman';
+}
+
+h3 {
+    display: block;
+    font-size: 1em;
+    opacity: 0;
+    animation: 2s loading 0.5s forwards;
+    cursor: pointer;
+}
+
+h3:hover::after {
+    content: ' \2191';
+}
+
+/*animations*/
+@keyframes loading {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes goingUp {
+    0% {}
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+
+@keyframes goingDown {
+    0% {
+        opacity: 1;
+        transform: translateY(-1000%);
+    }
+    100 {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes upanddown {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(35%);
+    }
+}
+
+@keyframes leaving {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-500%);
+    }
+}
+
+@keyframes starmoving {
+    from {
+        background-position: 5% 5%
+    }
+    to {
+        background-position: 1300% 600%
+    }
+}
+
+@keyframes movingright {
+    from {
+        transform: translate(10%, 0%);
+    }
+    to {
+        transform: translate(100%, 0%);
+    }
+}
+
+@keyframes draaienRechts {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes draaienLinks {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(-360deg);
+        opacity: 1;
+    }
+}
+
+/*responsive*/
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 7em;
+    }
+
+    .rocket {
+        left: 80vw;
+        padding: 2em 0em 2em 2em;
+        width: 6.5em;
+    }
+
+    .circle {
+        width: 70vh;
+        transform: translate(10%, 0%);
+    }
+
+    .moon {
+        margin-left: 3em;
+    }
+
+    .sun {
+        margin-left: 3em;
+    }
+
+    img {
+        width: 70vh;
+    }
+
+    img.kleur {
+        content: url(../images/earth_PNG39.png);
+        width: 70vh;
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+        z-index: 5;
+    }
+
+    img.draaiLinks {
+        width: 70vh;
+    }
+
+    img.draaiRechts {
+        width: 70vh;
+    }
+
+    button:hover {
+        background-color: aquamarine;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 5em;
+    }
+
+    .rocket {
+        top: 0%;
+        left: 80vw;
+        width: 6em;
+        padding: 2em 0.5em;
+        margin-left: -1em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        width: 9em;
+    }
+
+    .circle {
+        width: 50vh;
+        transform: translate(10%, 0%);
+    }
+
+    .moon {
+        margin-left: 2em;
+    }
+
+    .sun {
+        margin-left: 2em;
+    }
+
+    img {
+        width: 50vh;
+    }
+
+    img.kleur {
+        content: url(../images/earth_PNG39.png);
+        width: 50vh;
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+        z-index: 5;
+    }
+
+    img.draaiLinks {
+        width: 50vh;
+    }
+
+    img.draaiRechts {
+        width: 50vh;
+    }
+
+        button {
+        display: inline-block;
+        border-radius: 500px;
+        padding: 1em;
+        margin: 1em;
+        border: none;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1em;
+        width: 9em;
+    }
+
+    h2::after {
+    content: ' \2192';
+    }
+
+    .rocket {
+        left: 80vw;
+    }
+
+    .moon {
+        width: 3em;
+        margin-left: 2em;
+    }
+
+    .sun {
+        width: 3em;
+        margin-left: 2em;
+    }
+
+    .circle {
+        width: 30vh;
+        transform: translate(10%, 0%);
+    }
+
+    img {
+        width: 30vh;
+    }
+
+    img.kleur {
+        content: url(../images/earth_PNG39.png);
+        width: 30vh;
+        transform-origin: 50% 50%;
+        transform: rotate(0deg);
+        z-index: 5;
+    }
+
+    img.draaiLinks {
+        width: 30vh;
+    }
+
+    img.draaiRechts {
+        width: 30vh;
+    }
+}
